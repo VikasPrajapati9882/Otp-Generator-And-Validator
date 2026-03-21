@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+    --bg-color: #0f172a;           /* Deep Navy */
+    --card-bg: #1e293b;           /* Slate Blue-Grey */
+    --accent-primary: #38bdf8;    /* Soft Sky Blue */
+    --accent-secondary: #818cf8;  /* Soft Indigo */
+    --text-main: #f8fafc;         /* Off-white */
+    --text-muted: #94a3b8;        /* Muted Slate */
+    --border-color: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background-color: var(--bg-color);
+    background-image: radial-gradient(circle at top right, #1e1b4b, transparent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: var(--text-main);
+    font-family: "Inter", sans-serif;
+    gap: 30px;
+}
+
+/* Modernized Card Containers */
+.container,
+.checkContainer {
+    background-color: var(--card-bg);
+    width: 260px; /* Slightly wider for better breathing room */
+    padding: 24px;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.container:hover, .checkContainer:hover {
+    transform: translateY(-4px);
+}
+
+/* Typography & Labels */
+p {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--accent-primary);
+    margin-bottom: 12px;
+    border: none; /* Removed the boxy border */
+    width: 100%;
+}
+
+/* Display and Input Boxes */
+div, .validate {
+    background: rgba(15, 23, 42, 0.5); /* Semi-transparent depth */
+    border: 1px solid var(--border-color);
+    height: 40px;
+    width: 100%;
+    border-radius: 12px;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.validate:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2);
+}
+
+/* Buttons */
+.container2 {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+button {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    color: #0f172a;
+    transition: opacity 0.2s, transform 0.1s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* Footer text */
+nav, .section {
+    color: var(--text-muted);
+    font-size: 11px;
+    margin-top: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
